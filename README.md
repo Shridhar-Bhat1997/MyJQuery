@@ -1,2 +1,0 @@
-# MyJQuery
-JQuery Tasks
