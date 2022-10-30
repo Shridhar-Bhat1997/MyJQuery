@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+<title> Select HTML elements </title>
+<style>
+  .bluebox{
+      background-color: #3A5795;
+	  color:white;
+	  height:50px;
+	  width:500px;
+	  }
+   .yellowbox{
+   background-color: rgb(222,224,85);
+	  color:white;
+	  height:50px;
+	  width:auto;
+	  }
+    .greenbox{
+	background-color:green;
+	  color:white;
+	  height:50px;
+	  width:300px;
+	  }
+	.great{
+	   background-color:red;
+	   font-size:200%;
+	   }
+	   
+
+</style>
+
+<script src="js/jquery-3.6.1.min.js"> </script>
+  
+</head>
+
+<body>
+
+<!-- div is HTML section which group block elements -->
+<!--span is a inline element which group inline elements-->
+
+<div class="bluebox">
+ <p> Facebook is <span id="great"> great.<span> </p>
+</div>
+
+<p class="orange"> Paragraph2 </p>
+
+<div class="yellowbox">
+ <p> Microsoft </p>
+</div>
+<div class="greenbox">
+ <p> Wipro </p>
+</div>
+
+<!---JQuery---------------- -->
+
+<!-- selecting all html elements -->
+
+<script>
+
+$(function(){
+$("*").css("font-size","50px");  // to change font-size 
+
+$("p").css("text-align","center"); // to change text-align property
+
+$("#great").css("background-color","yellow"); // change background-color (id)
+
+$(".orange").css("background-color","pink"); // change background-color (class)
+
+$("div.bluebox").css("font-family","sans-serif"); // div of particular class
+
+});
+
+</script>
+</body>
+</html>
