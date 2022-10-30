@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+<title> Respond to Events </title>
+<style>
+  .bluebox{
+      background-color: #3A5795;
+	  color:white;
+	  height:50px;
+	  width:500px;
+	  }
+   .yellowbox{
+   background-color: rgb(222,224,85);
+	  color:white;
+	  height:50px;
+	  width:auto;
+	  }
+    .greenbox{
+	background-color:green;
+	  color:white;
+	  height:50px;
+	  width:300px;
+	  }
+	.great{
+	   background-color:red;
+	   font-size:200%;
+	   }
+	   
+
+</style>
+
+<script src="js/jquery-3.6.1.min.js"> </script>
+  
+</head>
+
+<body>
+
+<!-- div is HTML section which group block elements -->
+<!--span is a inline element which group inline elements-->
+
+<div class="bluebox">
+ <p> Facebook is <span id="great"> great.<span> </p>
+</div>
+
+<p class="orange"> Paragraph2 </p>
+
+<div class="yellowbox">
+ <p> Microsoft </p>
+</div>
+<div class="greenbox">
+ <p> Wipro </p>
+</div>
+
+<p> Type your name: </p>
+<input id="input"> 
+<button type="submit" id="submit"> Submit </button>
+
+<!---JQuery---------------- -->
+
+
+
+<script>
+
+<!-- Respond to Events -->
+
+<!-- change the color of paragraph that we click -->
+
+$(function(){
+$("p").click(function(){
+  $("p").css("background-color","pink");
+  });
+  
+ <!-- change the color of inputbox -->
+ $("input").focus(function(){
+    $(this).css("background-color","green");
+   });
+ 
+ <!-- change the color of textbox if we enter some value -->
+ $("input").keyup(function(){
+ $(this).css("background-color","blue");
+ });
+ 
+ <!-- clicking on a button, value should be reset to nothing -->
+ $("#submit").click(function(){
+ $("#input").css("background-color","white");
+ $("#input").val("");
+ });
+ 
+ 
+ });
+
+
+
+
+</script>
+</body>
+</html>
